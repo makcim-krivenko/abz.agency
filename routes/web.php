@@ -11,6 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/',                       'EmployeeController@welcome');
+
+Auth::routes();
+
+Route::group(['middleware' => ['auth']], function() {
+
+    Route::get('/home',               'HomeController@index')->name('home');
+
+    Route::group(['prefix' => 'employees'], function () {
+        Route::get('/',               'EmployeeController@index');
+        Route::get('/create/',        'EmployeeController@create');
+        Route::post('/store',         'EmployeeController@store');
+        Route::get('/edit/{id}',      'EmployeeController@edit')
+             ->where('id', '[0-9]+');
+        Route::post('/update/{id}',   'EmployeeController@update')
+             ->where('id', '[0-9]+');
+        Route::get('/delete/{id}',    'EmployeeController@destroy')
+             ->where('id', '[0-9]+');
+    });
 });

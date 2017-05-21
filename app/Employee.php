@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     /**
+     * The model's attributes.
+     *
+     * @var array
+     */
+    protected $attributes = ['parent_id' => 1];
+
+    /**
      * The attributes that should be mutated to dates.
      *
      * @var array
