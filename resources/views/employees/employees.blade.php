@@ -13,7 +13,9 @@
                     @endif
                 </div>
                 <h2>Employees</h2>
-                <a href="/employees/create/" class="btn btn-primary btn-outline"><i class="fa fa-btn fa-plus"></i>  Add New</a>
+                <div class="form-group">
+                    <a href="/employees/create/" class="btn btn-primary btn-outline"><i class="fa fa-btn fa-plus"></i>  Add New</a>
+                </div>
                 <table class="table table-striped table-bordered table-hover" style="margin-top: 20px;">
                     <thead>
                     <tr>
@@ -21,6 +23,7 @@
                         <th>Full name</th>
                         <th>Work from</th>
                         <th>Salary</th>
+                        <th>Avatar</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -34,6 +37,12 @@
                             <td>{{$employee->full_name}}</td>
                             <td>{{$employee->work_from}}</td>
                             <td>{{$employee->salary}}</td>
+                            <td>
+                                <div style="height: 51px; width: 51px;">
+                                    <img src="{{ GlideImage::load($employee->avatarPath())->modify(['h'=>50, 'w'=>50, 'fit'=>'fill', 'crop'=>'crop-center']) }}"
+                                         alt="avatar"/>
+                                </div>
+                            </td>
                             <td><a href="/employees/edit/{{$employee->id}}" class="btn btn-danger"><i class="fa fa-btn fa-edit"></i>  Edit</a></td>
                             <td><a href="/employees/delete/{{$employee->id}}" class="btn btn-danger"><i class="fa fa-btn fa-trash-o"></i>  Delete</a></td>
                         </tr>

@@ -14,11 +14,9 @@
 Route::get('/',                       'EmployeeController@welcome');
 
 Auth::routes();
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout'); //Just added to fix issue
 
 Route::group(['middleware' => ['auth']], function() {
-
-    Route::get('/home',               'HomeController@index')->name('home');
-
     Route::group(['prefix' => 'employees'], function () {
         Route::get('/',               'EmployeeController@index');
         Route::get('/create/',        'EmployeeController@create');
@@ -29,5 +27,9 @@ Route::group(['middleware' => ['auth']], function() {
              ->where('id', '[0-9]+');
         Route::get('/delete/{id}',    'EmployeeController@destroy')
              ->where('id', '[0-9]+');
+        Route::get('/search',        'EmployeeController@search');
     });
 });
+
+Route::get('/tree',                  'EmployeeController@tree');
+Route::get('/gettree',               'EmployeeController@getTree');
