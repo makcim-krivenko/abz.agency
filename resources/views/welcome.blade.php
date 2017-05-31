@@ -13,3 +13,8 @@
         });
     </script>
 @endsection
+
+@section('script')
+    <script src="bower_components/jqtree/tree.jquery.js"></script>
+    <link rel="stylesheet" href="bower_components/jqtree/jqtree.css">
+@endsection

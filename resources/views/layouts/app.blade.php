@@ -28,8 +28,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 
-    <script src="bower_components/jqtree/tree.jquery.js"></script>
-    <link rel="stylesheet" href="bower_components/jqtree/jqtree.css">
+    @yield('script')
+
 </head>
 <body id="app-layout">
 <nav class="navbar navbar-default navbar-static-top">

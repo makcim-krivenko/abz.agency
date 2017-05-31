@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\DB;
 
 class EmployeeController extends Controller
 {
+    /**
+     * Row count for pagination
+     *
+     * @var string
+     */
     const PER_PAGE = 12;
 
     /**
@@ -18,6 +23,13 @@ class EmployeeController extends Controller
      * @var string
      */
     const AVATAR_PATH = 'avatars';
+
+    /**
+     * Folder with avatars
+     *
+     * @var string
+     */
+    const BIG_BOSS = 'Big Boss';
 
     /**
      * Display a listing of the employees.
@@ -38,7 +50,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        $positions = Position::where('name', '!=', 'Big Boss')->get();
+        $positions = Position::where('name', '!=', static::BIG_BOSS)->get();
 
         return view('employees.create', ['positions' => $positions]);
     }
@@ -67,6 +79,12 @@ class EmployeeController extends Controller
                 ->withInput();
         }
 
+        if ($position->name == static::BIG_BOSS) {
+            return redirect('/employees/create')
+                ->withErrors(['save_error' => 'Not allowed position'])
+                ->withInput();
+        }
+
         $boss = Employee::find($request->boss);
         if (!isset($boss->id)) {
             return redirect('/employees/create')
@@ -86,7 +104,9 @@ class EmployeeController extends Controller
                 ->withInput();
         }
 
-        $request->file('avatar')->move(storage_path(static::AVATAR_PATH) . $employee->id . 'jpg');
+        if (isset($request->avatar)) {
+            $request->avatar->storeAs(static::AVATAR_PATH, $employee->id . '.jpg');
+        }
 
         return redirect('/employees/');
     }
@@ -207,9 +227,9 @@ class EmployeeController extends Controller
 
     public function search(Request $request)
     {
-        $employeers = Employee::where('full_name', 'like', '%' . $request->q . '%')->get(['id', 'full_name']);
+        $employees = Employee::where('full_name', 'like', '%' . $request->q . '%')->get(['id', 'full_name']);
 
-        return json_encode(['items' => $employeers->toArray()]);
+        return json_encode(['items' => $employees->toArray()]);
     }
 
     public function tree()

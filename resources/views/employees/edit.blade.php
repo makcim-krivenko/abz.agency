@@ -88,14 +88,26 @@
     </div>
 
     <script type="text/javascript">
-
         function formatResult(item) {
             if(!item.id) {
                 // return `text` for optgroup
-                return item.full_name;
+                return '<i>Choice</i>';
             }
+
             // return item template
             return '<i>' + item.full_name + '</i>';
+        }
+
+        function templateSelection(data) {
+            if (data.id === '') { // adjust for custom placeholder values
+                return 'Custom styled placeholder text';
+            }
+
+            if (data.full_name === undefined) {
+                return data.text;
+            }
+
+            return data.full_name;
         }
 
         $(".js-data-example-ajax").select2({
@@ -110,10 +122,6 @@
                     };
                 },
                 processResults: function (data, params) {
-                    // parse the results into the format expected by Select2
-                    // since we are using custom formatting functions we do not need to
-                    // alter the remote JSON data, except to indicate that infinite
-                    // scrolling can be used
                     params.page = params.page || 1;
 
                     return {
@@ -127,8 +135,8 @@
             },
             escapeMarkup: function (markup) { return markup; }, // let our custom formatter works
             minimumInputLength: 5,
-            templateResult: formatResult
+            templateResult: formatResult,
+            templateSelection: templateSelection
         });
     </script>
 @endsection
-
