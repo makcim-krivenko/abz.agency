@@ -1,0 +1,117 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/mbraak/jqTree#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/mbraak/jqTree#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+        "spec": "git+https://github.com/mbraak/jqTree.git#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:mbraak/jqTree.git#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+          "sshUrl": "git+ssh://git@github.com/mbraak/jqTree.git#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+          "httpsUrl": "git+https://github.com/mbraak/jqTree.git#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+          "gitUrl": "git://github.com/mbraak/jqTree.git#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+          "shortcut": "github:mbraak/jqTree#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+          "directUrl": "https://raw.githubusercontent.com/mbraak/jqTree/02cc6f3c76447f377b4ba0eecbb7917e10a288e2/package.json"
+        }
+      },
+      "C:\\Open Server\\OpenServer\\domains\\abz.agency\\public"
+    ]
+  ],
+  "_from": "git+https://github.com/mbraak/jqTree.git#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+  "_id": "jqtree@1.4.0",
+  "_inCache": true,
+  "_location": "/jqtree",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/mbraak/jqTree#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/mbraak/jqTree#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+    "spec": "git+https://github.com/mbraak/jqTree.git#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:mbraak/jqTree.git#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+      "sshUrl": "git+ssh://git@github.com/mbraak/jqTree.git#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+      "httpsUrl": "git+https://github.com/mbraak/jqTree.git#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+      "gitUrl": "git://github.com/mbraak/jqTree.git#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+      "shortcut": "github:mbraak/jqTree#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+      "directUrl": "https://raw.githubusercontent.com/mbraak/jqTree/02cc6f3c76447f377b4ba0eecbb7917e10a288e2/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/mbraak/jqTree.git#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+  "_shasum": "8d21160cbe92d68aab9ca267708aa3d7c98c47d3",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/mbraak/jqTree#02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+  "_where": "C:\\Open Server\\OpenServer\\domains\\abz.agency\\public",
+  "bugs": {
+    "url": "https://github.com/mbraak/jqtree/issues"
+  },
+  "dependencies": {
+    "jquery": ">=1.9"
+  },
+  "description": "Tree widget for jQuery",
+  "devDependencies": {
+    "connect": "^3.6.0",
+    "coveralls": "^2.13.1",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-typescript": "^3.1.6",
+    "jquery-mockjax": "^2.2.1",
+    "jsonfile": "^3.0.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-cli": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-qunit": "^1.2.1",
+    "karma-webpack": "^2.0.3",
+    "lodash.template": "^4.4.0",
+    "phantomjs-prebuilt": "^2.1.14",
+    "qunitjs": "^2.3.2",
+    "serve-static": "^1.12.2",
+    "ts-loader": "^2.0.3",
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "gitHead": "02cc6f3c76447f377b4ba0eecbb7917e10a288e2",
+  "homepage": "https://github.com/mbraak/jqtree#readme",
+  "keywords": [
+    "jquery-plugin",
+    "tree"
+  ],
+  "license": "Apache-2.0",
+  "main": "./lib/tree.jquery.js",
+  "name": "jqtree",
+  "optionalDependencies": {},
+  "readme": "[![Travis Status](https://api.travis-ci.org/mbraak/jqTree.svg)](http://travis-ci.org/mbraak/jqTree) [![Coverage Status](https://img.shields.io/coveralls/mbraak/jqTree.svg)](https://coveralls.io/r/mbraak/jqTree)\r\n\r\n[![Bower version](https://img.shields.io/bower/v/jqtree.svg)](https://mbraak.github.io/jqTree/) [![NPM version](https://img.shields.io/npm/v/jqtree.svg)](https://www.npmjs.com/package/jqtree)\r\n\r\n# jqTree\r\n\r\nJqTree is a tree widget. Read more in the [documentation](https://mbraak.github.io/jqTree/).\r\n\r\n![screenshot](https://raw.github.com/mbraak/jqTree/master/screenshot.png)\r\n\r\n## Features\r\n\r\n* Create a tree from JSON data\r\n* Drag and drop\r\n* Works on ie9+, firefox, chrome and safari\r\n* Written in Typescript\r\n\r\nThe project is hosted on [github](https://github.com/mbraak/jqTree), has a [test suite](http://mbraak.github.io/jqTree/test/test.html).\r\n\r\n## Examples\r\n\r\nExample with ajax data:\r\n\r\n```html\r\n<div id=\"tree1\" data-url=\"/example_data/\"></div>\r\n```\r\n\r\n```js\r\n$('#tree1').tree();\r\n```\r\n\r\nExample with static data:\r\n\r\n```js\r\nvar data = [\r\n    {\r\n        label: 'node1', id: 1,\r\n        children: [\r\n            { label: 'child1', id: 2 },\r\n            { label: 'child2', id: 3 }\r\n        ]\r\n    },\r\n    {\r\n        label: 'node2', id: 4,\r\n        children: [\r\n            { label: 'child3', id: 5 }\r\n        ]\r\n    }\r\n];\r\n$('#tree1').tree({\r\n    data: data,\r\n    autoOpen: true,\r\n    dragAndDrop: true\r\n});\r\n```\r\n\r\n## Documentation\r\n\r\nThe documentation is on http://mbraak.github.io/jqTree/.\r\n\r\n## Thanks\r\n\r\nThe code for the mouse widget is heavily inspired by the mouse widget from jquery ui.\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbraak/jqtree.git"
+  },
+  "scripts": {
+    "devserver": "webpack-dev-server",
+    "jekyll-build": "jekyll build",
+    "jekyll-serve": "jekyll serve",
+    "karma": "karma start --browsers Chrome",
+    "lint": "tslint src/*.ts",
+    "production": "webpack --config webpack.config.production && gulp && cp build/tree.jquery.js .",
+    "test": "karma start --browsers Chrome --single-run && tslint src/*.ts src_test/*.ts",
+    "watch": "webpack"
+  },
+  "types": "./src/tree.jquery.d.ts",
+  "version": "1.4.0"
+}
